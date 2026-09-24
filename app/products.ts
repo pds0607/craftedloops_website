@@ -68,7 +68,7 @@ export const products: Product[] = [
   },
   {
     slug: "crochet-bell-anklet-pair", code: "J03", name: "Crochet Bell Anklet Pair", shortName: "Bell Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
-    description: "A pair of hand-crocheted anklets with alternating colorful circles and little silver bells. Wear them together or choose your own yarn colors for each anklet.",
+    description: "A pair of hand-crocheted anklets with alternating colorful circles and little silver bells. Choose two yarn colors for a matching pair.",
     shortDescription: "Colorful crochet circles and silver bells in a matching anklet pair.", image: "/anklet-pink-pair.webp", startingPrice: "$20",
     detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
     colors: [

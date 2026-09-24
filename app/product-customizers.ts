@@ -67,14 +67,12 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
           };
     case "crochet-bell-anklet-pair":
       return {
-        items: repeatedItems("Anklet", 2, [
+        items: [{ id: "pair", label: "Anklet pair", slots: [
           { id: "circle1", label: "Alternating circle color 1" },
           { id: "circle2", label: "Alternating circle color 2" },
-        ]),
+        ] }],
         fixed: ["Silver bells and metal hardware"],
-        note: "Choose two alternating yarn colors for each anklet. The photo will not update to show your selection.",
-        copyAllLabel: "Copy Anklet 1 colors to Anklet 2",
-        copyPrevious: true,
+        note: "Choose two alternating yarn colors for the pair. Both anklets will use the same colors. The photo will not update to show your selection.",
       };
     case "crochet-gajara-scrunchie": {
       const count = option === "Set of 2" ? 2 : 1;

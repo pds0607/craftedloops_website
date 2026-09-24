@@ -4,10 +4,11 @@ import test from "node:test";
 
 const root = new URL("..", import.meta.url);
 
-test("catalogue includes all seven product routes", async () => {
+test("catalogue includes all eight product routes", async () => {
   const source = await readFile(new URL("app/products.ts", root), "utf8");
-  assert.equal([...source.matchAll(/code: "[A-Z][0-9]{2}"/g)].length, 7);
+  assert.equal([...source.matchAll(/code: "[A-Z][0-9]{2}"/g)].length, 8);
   assert.match(source, /crochet-cowrie-shell-necklace-set/);
+  assert.match(source, /crochet-bell-anklet-pair/);
   assert.match(source, /crochet-rose-hoop-wall-hanging/);
 });
 
@@ -35,7 +36,7 @@ test("all products include the Y01-Y15 custom color builder", async () => {
   assert.match(customizers, /Copy Coaster 1 colors to all/);
   assert.match(detail, /custom_color_details/);
   assert.equal([...palette.matchAll(/code: "Y\d{2}"/g)].length, 15);
-  assert.equal([...customizers.matchAll(/case "/g)].length, 7);
+  assert.equal([...customizers.matchAll(/case "/g)].length, 8);
   assert.match(customizers, /Center \+ earrings color/);
   assert.match(customizers, /Spiral\/body \+ tassel color/);
   assert.match(customizers, /Inner rose color/);
@@ -44,6 +45,7 @@ test("all products include the Y01-Y15 custom color builder", async () => {
     "bloom-coaster",
     "navratri-mirror-jewelry-set",
     "crochet-cowrie-shell-necklace-set",
+    "crochet-bell-anklet-pair",
     "crochet-gajara-scrunchie",
     "crochet-mandala-table-mat",
     "spiral-crochet-hanging",

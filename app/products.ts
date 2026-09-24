@@ -67,6 +67,24 @@ export const products: Product[] = [
     options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$8" }],
   },
   {
+    slug: "crochet-bell-anklet-pair", code: "J03", name: "Crochet Bell Anklet Pair", shortName: "Bell Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    description: "A pair of hand-crocheted anklets with alternating colorful circles and little silver bells. Wear them together or choose your own yarn colors for each anklet.",
+    shortDescription: "Colorful crochet circles and silver bells in a matching anklet pair.", image: "/anklet-pink-pair.webp", startingPrice: "$20",
+    detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
+    colors: [
+      { name: "Pink + ivory", colors: ["#ec4e9a", "#f2ead8"], image: "/anklet-pink-pair.webp" },
+      { name: "Orange + yellow", colors: ["#f47a18", "#f5aa22"], image: "/anklet-orange-yellow-pair.webp" },
+      { name: "Royal blue + ivory", colors: ["#174bbf", "#f2ead8"], image: "/anklet-blue-detail.webp" },
+    ],
+    gallery: [
+      { image: "/anklet-pink-pair.webp", alt: "Pink and ivory crochet bell anklet pair worn on both ankles" },
+      { image: "/anklet-orange-yellow-pair.webp", alt: "Orange and yellow crochet bell anklet pair worn on both ankles" },
+      { image: "/anklet-blue-detail.webp", alt: "Royal blue and ivory crochet bell anklet on an ankle" },
+      { image: "/anklet-pink-detail.webp", alt: "Close view of a pink and ivory crochet bell anklet" },
+    ],
+    options: [{ label: "Pair of anklets", price: "$20" }],
+  },
+  {
     slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",

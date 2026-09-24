@@ -23,4 +23,35 @@ test("production output includes the inquiry handler", async () => {
   const handler = await readFile(new URL("public/send-inquiry.php", root), "utf8");
   assert.match(handler, /inquiry@craftedloops\.art/);
   assert.match(handler, /FILTER_VALIDATE_EMAIL/);
+  assert.match(handler, /custom_color_details/);
+});
+
+test("all products include the Y01-Y15 custom color builder", async () => {
+  const detail = await readFile(new URL("app/products/[slug]/product-detail.tsx", root), "utf8");
+  const palette = await readFile(new URL("app/yarn-colors.ts", root), "utf8");
+  const customizers = await readFile(new URL("app/product-customizers.ts", root), "utf8");
+  assert.match(detail, /Additional Color options/);
+  assert.match(detail, /className="yarn-overview"/);
+  assert.match(customizers, /Copy Coaster 1 colors to all/);
+  assert.match(detail, /custom_color_details/);
+  assert.equal([...palette.matchAll(/code: "Y\d{2}"/g)].length, 15);
+  assert.equal([...customizers.matchAll(/case "/g)].length, 7);
+  assert.match(customizers, /Center \+ earrings color/);
+  assert.match(customizers, /Spiral\/body \+ tassel color/);
+  assert.match(customizers, /Inner rose color/);
+
+  const productSlugs = [
+    "bloom-coaster",
+    "navratri-mirror-jewelry-set",
+    "crochet-cowrie-shell-necklace-set",
+    "crochet-gajara-scrunchie",
+    "crochet-mandala-table-mat",
+    "spiral-crochet-hanging",
+    "crochet-rose-hoop-wall-hanging",
+  ];
+  for (const slug of productSlugs) {
+    const html = await readFile(new URL(`dist/client/products/${slug}/index.html`, root), "utf8");
+    assert.match(html, /Additional Color options/, `${slug} should render the custom color builder`);
+    assert.match(html, /class="yarn-overview"/, `${slug} should include the 15-color palette`);
+  }
 });

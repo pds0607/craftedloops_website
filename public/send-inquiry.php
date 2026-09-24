@@ -36,27 +36,35 @@ $instagram = clean_line((string) ($_POST['instagram_handle'] ?? ''), 80);
 $productCode = clean_line((string) ($_POST['product_code'] ?? ''), 30);
 $productName = clean_line((string) ($_POST['product_name'] ?? ''), 120);
 $selectedColor = clean_line((string) ($_POST['selected_color'] ?? ''), 120);
+$customColorDetails = substr(trim(strip_tags((string) ($_POST['custom_color_details'] ?? ''))), 0, 1800);
+$customColorDetails = preg_replace("/\r\n?/", "\n", $customColorDetails) ?? '';
 $purchaseOption = clean_line((string) ($_POST['purchase_option'] ?? ''), 100);
 $price = clean_line((string) ($_POST['price'] ?? ''), 30);
 $message = substr(trim((string) ($_POST['message'] ?? '')), 0, 1200);
 
-if ($customerName === '' || $customerEmail === false || $productName === '') {
+if ($customerName === '' || $customerEmail === false || $productName === '' || ($selectedColor === 'Custom combination' && $customColorDetails === '')) {
     return_to_product($productPath, 'error');
 }
 
 $subject = 'Crafted Loops inquiry: ' . $productCode . ' ' . $productName;
-$body = implode("\n", [
+$colorDetails = ['Color/design: ' . $selectedColor];
+if ($customColorDetails !== '') {
+    $colorDetails[] = 'Custom colors:';
+    $colorDetails[] = $customColorDetails;
+}
+
+$body = implode("\n", array_merge([
     'New inquiry from craftedloops.art', '',
     'Customer: ' . $customerName,
     'Email: ' . $customerEmail,
     'Instagram: ' . ($instagram !== '' ? $instagram : 'Not provided'), '',
     'Product: ' . $productCode . ' — ' . $productName,
-    'Color/design: ' . $selectedColor,
+], $colorDetails, [
     'Purchase option: ' . $purchaseOption,
     'Price: ' . $price,
     'Product link: ' . SITE_ORIGIN . $productPath, '',
     'Message:', $message !== '' ? $message : 'No additional message.',
-]);
+]));
 
 $headers = implode("\r\n", [
     'From: Crafted Loops Website <inquiry@craftedloops.art>',

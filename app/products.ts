@@ -85,6 +85,22 @@ export const products: Product[] = [
     options: [{ label: "Pair of anklets", price: "$20" }],
   },
   {
+    slug: "chime-anklet-pair", code: "J04", name: "Chime Anklet Pair", shortName: "Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    description: "A matching pair of hand-crocheted anklets with a textured band, dangling bells, and adjustable chain clasps. Choose one yarn color for both anklets.",
+    shortDescription: "A simple crochet band with little dangling bells, made as a matching pair.", image: "/chime-anklet-pair.jpg", startingPrice: "$8",
+    detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
+    colors: [{ name: "Royal blue", colors: ["#174bbf"], image: "/chime-anklet-pair.jpg" }],
+    options: [{ label: "Pair of anklets", price: "$8" }],
+  },
+  {
+    slug: "lace-chime-anklet-pair", code: "J05", name: "Lace Chime Anklet Pair", shortName: "Lace Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    description: "A matching pair of hand-crocheted anklets with delicate open loops, colorful dangling bells, and adjustable chain clasps. Choose one yarn color for both anklets.",
+    shortDescription: "Delicate crochet loops and colorful bells in a matching anklet pair.", image: "/lace-chime-anklet-pair.jpg", startingPrice: "$8",
+    detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
+    colors: [{ name: "Ivory + colorful bells", colors: ["#f2ead8"], image: "/lace-chime-anklet-pair.jpg" }],
+    options: [{ label: "Pair of anklets", price: "$8" }],
+  },
+  {
     slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",

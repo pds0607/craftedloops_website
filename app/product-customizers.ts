@@ -74,6 +74,18 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
         fixed: ["Silver bells and metal hardware"],
         note: "Choose two alternating yarn colors for the pair. Both anklets will use the same colors. The photo will not update to show your selection.",
       };
+    case "chime-anklet-pair":
+      return {
+        items: [{ id: "pair", label: "Anklet pair", slots: [{ id: "main", label: "Yarn color" }] }],
+        fixed: ["Bells, clasps and extension chains"],
+        note: "Choose one yarn color for the matching pair. Both anklets will use the same color. The photo will not update to show your selection.",
+      };
+    case "lace-chime-anklet-pair":
+      return {
+        items: [{ id: "pair", label: "Anklet pair", slots: [{ id: "main", label: "Yarn color" }] }],
+        fixed: ["Colorful bells, clasps and extension chains"],
+        note: "Choose one yarn color for the matching pair. Both anklets will use the same color. The photo will not update to show your selection.",
+      };
     case "crochet-gajara-scrunchie": {
       const count = option === "Set of 2" ? 2 : 1;
       return {

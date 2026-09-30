@@ -26,18 +26,18 @@ export const products: Product[] = [
   {
     slug: "navratri-mirror-jewelry-set", code: "J01", name: "Navratri Mirror Jewelry Set", shortName: "Mirror Jewelry Set", category: "Crochet jewelry", categorySlug: "jewelry",
     description: "A colorful crochet necklace with mirror accents and silver ghungroo-style bells, paired with matching earrings. Choose a festive color mix, or select the earrings on their own.",
-    shortDescription: "A festive mirror necklace and matching earrings in joyful color mixes.", image: "/navratri-red-set.png", startingPrice: "$8",
+    shortDescription: "A festive mirror necklace and matching earrings in joyful color mixes.", image: "/navratri-red-set.png", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Festive colors",
     colors: [
       { name: "Red festive mix", colors: ["#d51524", "#008c73", "#f3b51b"], image: "/navratri-red-set.png" },
       { name: "Orange festive mix", colors: ["#fb6713", "#f15397", "#16905f"], image: "/navratri-orange-set.png" },
       { name: "Green festive mix", colors: ["#7ebc31", "#079fc7", "#174bc6"], image: "/navratri-green-set.png" },
-    ], options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$8" }],
+    ], options: [{ label: "Full set", price: "$15" }, { label: "Earrings only", price: "$5" }],
   },
   {
     slug: "crochet-cowrie-shell-necklace-set", code: "J02", name: "Crochet Cowrie Shell Necklace Set", shortName: "Cowrie Shell Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry",
     description: "A graceful hand-crocheted necklace finished with reflective mirror accents and a row of dangling cowrie shells, paired with matching round earrings. Choose from seven bright yarn colors for a festive or everyday statement.",
-    shortDescription: "A mirror-accented crochet necklace with cowrie shells and matching earrings.", image: "/cowrie-necklace-y06.webp", startingPrice: "$8",
+    shortDescription: "A mirror-accented crochet necklace with cowrie shells and matching earrings.", image: "/cowrie-necklace-y06.webp", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Seven colors shown",
     colors: [
       { name: "Y06 Emerald green", colors: ["#07834f"], image: "/cowrie-necklace-y06.webp" },
@@ -64,12 +64,12 @@ export const products: Product[] = [
       { image: "/cowrie-necklace-y13-mannequin.webp", alt: "Bright blue crochet cowrie shell necklace displayed on a black mannequin" },
       { image: "/cowrie-necklace-y14-mannequin.webp", alt: "Orchid crochet cowrie shell necklace displayed on a black mannequin" },
     ],
-    options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$8" }],
+    options: [{ label: "Full set", price: "$15" }, { label: "Earrings only", price: "$5" }],
   },
   {
     slug: "crochet-bell-anklet-pair", code: "J03", name: "Crochet Bell Anklet Pair", shortName: "Bell Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
     description: "A pair of hand-crocheted anklets with alternating colorful circles and little silver bells. Choose two yarn colors for a matching pair.",
-    shortDescription: "Colorful crochet circles and silver bells in a matching anklet pair.", image: "/anklet-pink-pair.webp", startingPrice: "$20",
+    shortDescription: "Colorful crochet circles and silver bells in a matching anklet pair.", image: "/anklet-pink-pair.webp", startingPrice: "$15",
     detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
     colors: [
       { name: "Pink + ivory", colors: ["#ec4e9a", "#f2ead8"], image: "/anklet-pink-pair.webp" },
@@ -82,7 +82,7 @@ export const products: Product[] = [
       { image: "/anklet-blue-detail.webp", alt: "Royal blue and ivory crochet bell anklet on an ankle" },
       { image: "/anklet-pink-detail.webp", alt: "Close view of a pink and ivory crochet bell anklet" },
     ],
-    options: [{ label: "Pair of anklets", price: "$20" }],
+    options: [{ label: "Pair of anklets", price: "$15" }],
   },
   {
     slug: "chime-anklet-pair", code: "J04", name: "Chime Anklet Pair", shortName: "Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",

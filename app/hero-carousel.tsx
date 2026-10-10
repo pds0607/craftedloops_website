@@ -6,7 +6,7 @@ import { products } from "./products";
 
 const featuredProducts = [...products]
   .sort((a, b) => Date.parse(b.addedAt) - Date.parse(a.addedAt))
-  .slice(0, 3);
+  .slice(0, 5);
 
 export function HeroCarousel() {
   const [current, setCurrent] = useState(0);

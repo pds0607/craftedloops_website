@@ -123,7 +123,10 @@ export const products: Product[] = [
       { name: "Purple + hot pink", colors: ["#7f29bc", "#ec188f"], image: "/mirror-chime-hair-clip.jpg" },
       { name: "Ivory + red", colors: ["#f2ead8", "#e4142e"], image: "/mirror-chime-hair-clip.jpg" },
     ],
-    gallery: [{ image: "/mirror-chime-hair-clip.jpg", alt: "Three crochet mirror hair clips in lime and blue, purple and pink, and ivory and red" }],
+    gallery: [
+      { image: "/mirror-chime-hair-clip.jpg", alt: "Three crochet mirror hair clips in lime and blue, purple and pink, and ivory and red" },
+      { image: "/mirror-chime-hair-clip-model.webp", alt: "Ivory and red mirror hair clip with colorful bells securing a half-up hairstyle on a festive model" },
+    ],
     options: [{ label: "One hair clip", price: "$4" }],
   },
   {

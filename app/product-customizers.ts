@@ -96,6 +96,15 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
         fixed: ["Colorful bells, clasps and extension chains"],
         note: "Choose one yarn color for the matching pair. Both anklets will use the same color. The photo will not update to show your selection.",
       };
+    case "mirror-chime-hair-clip":
+      return {
+        items: [{ id: "clip", label: "Hair clip", slots: [
+          { id: "body", label: "Main/body color" },
+          { id: "ring", label: "Accent ring color" },
+        ] }],
+        fixed: ["Center mirror and metal clip hardware"],
+        note: "Choose the main and accent yarn colors for your hair clip. Bell colors will be coordinated with your selection. The photo will not update to show your colors.",
+      };
     case "crochet-gajara-scrunchie": {
       const count = option === "Set of 2" ? 2 : 1;
       return {

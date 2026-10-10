@@ -110,6 +110,19 @@ export const products: Product[] = [
     options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$5" }],
   },
   {
+    slug: "mirror-chime-hair-clip", code: "A01", name: "Mirror Chime Hair Clip", shortName: "Mirror Chime Hair Clip", category: "Hair accessories", categorySlug: "hair-accessories",
+    description: "A bright hand-crocheted hair clip with a round mirror center, contrasting crochet ring, scalloped edging, and dangling bells. Choose one of the photographed combinations or request your own two-color design.",
+    shortDescription: "A colorful crochet hair clip with a mirror center and playful dangling bells.", image: "/mirror-chime-hair-clip.jpg", startingPrice: "$4",
+    detailLabel: "Includes", detailValue: "One hair clip", colorLabel: "Three colorways shown",
+    colors: [
+      { name: "Lime + royal blue", colors: ["#8fcf19", "#174bbf"], image: "/mirror-chime-hair-clip.jpg" },
+      { name: "Purple + hot pink", colors: ["#7f29bc", "#ec188f"], image: "/mirror-chime-hair-clip.jpg" },
+      { name: "Ivory + red", colors: ["#f2ead8", "#e4142e"], image: "/mirror-chime-hair-clip.jpg" },
+    ],
+    gallery: [{ image: "/mirror-chime-hair-clip.jpg", alt: "Three crochet mirror hair clips in lime and blue, purple and pink, and ivory and red" }],
+    options: [{ label: "One hair clip", price: "$4" }],
+  },
+  {
     slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",

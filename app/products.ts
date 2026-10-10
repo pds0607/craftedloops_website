@@ -4,13 +4,14 @@ export type ProductImage = { image: string; alt: string };
 
 export type Product = {
   slug: string; code: string; name: string; shortName: string; category: string; categorySlug: string;
+  addedAt: string;
   description: string; shortDescription: string; image: string; startingPrice: string;
   detailLabel: string; detailValue: string; colorLabel: string; colors: ProductColor[]; gallery?: ProductImage[]; options: ProductOption[];
 };
 
 export const products: Product[] = [
   {
-    slug: "bloom-coaster", code: "C01", name: "Bloom Coaster", shortName: "Bloom Coaster", category: "Coasters", categorySlug: "coasters",
+    slug: "bloom-coaster", code: "C01", name: "Bloom Coaster", shortName: "Bloom Coaster", category: "Coasters", categorySlug: "coasters", addedAt: "2026-09-01T09:00:00-07:00",
     description: "A cheerful round coaster with a soft crochet center, leafy green edging, and raised flower petals. Choose a favorite flower pairing or ask for your own combination.",
     shortDescription: "Raised flower petals, leafy edging, and colors made to feel like yours.", image: "/floral-coaster-actual.png", startingPrice: "$15",
     detailLabel: "Size", detailValue: "Approx. 6 in", colorLabel: "Custom colors",
@@ -24,7 +25,7 @@ export const products: Product[] = [
     ], options: [{ label: "One coaster", price: "$15" }, { label: "Set of 4", price: "$40" }],
   },
   {
-    slug: "navratri-mirror-jewelry-set", code: "J01", name: "Navratri Mirror Jewelry Set", shortName: "Mirror Jewelry Set", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "navratri-mirror-jewelry-set", code: "J01", name: "Navratri Mirror Jewelry Set", shortName: "Mirror Jewelry Set", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-09-03T09:00:00-07:00",
     description: "A colorful crochet necklace with mirror accents and silver ghungroo-style bells, paired with matching earrings. Choose a festive color mix, or select the earrings on their own.",
     shortDescription: "A festive mirror necklace and matching earrings in joyful color mixes.", image: "/navratri-red-set.png", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Festive colors",
@@ -35,7 +36,7 @@ export const products: Product[] = [
     ], options: [{ label: "Full set", price: "$15" }, { label: "Earrings only", price: "$5" }],
   },
   {
-    slug: "crochet-cowrie-shell-necklace-set", code: "J02", name: "Crochet Cowrie Shell Necklace Set", shortName: "Cowrie Shell Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "crochet-cowrie-shell-necklace-set", code: "J02", name: "Crochet Cowrie Shell Necklace Set", shortName: "Cowrie Shell Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-09-04T09:00:00-07:00",
     description: "A graceful hand-crocheted necklace finished with reflective mirror accents and a row of dangling cowrie shells, paired with matching round earrings. Choose from seven bright yarn colors for a festive or everyday statement.",
     shortDescription: "A mirror-accented crochet necklace with cowrie shells and matching earrings.", image: "/cowrie-necklace-y06.webp", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Seven colors shown",
@@ -67,7 +68,7 @@ export const products: Product[] = [
     options: [{ label: "Full set", price: "$15" }, { label: "Earrings only", price: "$5" }],
   },
   {
-    slug: "crochet-bell-anklet-pair", code: "J03", name: "Crochet Bell Anklet Pair", shortName: "Bell Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "crochet-bell-anklet-pair", code: "J03", name: "Crochet Bell Anklet Pair", shortName: "Bell Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-09-22T09:00:00-07:00",
     description: "A pair of hand-crocheted anklets with alternating colorful circles and little silver bells. Choose two yarn colors for a matching pair.",
     shortDescription: "Colorful crochet circles and silver bells in a matching anklet pair.", image: "/anklet-pink-pair.webp", startingPrice: "$15",
     detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
@@ -85,7 +86,7 @@ export const products: Product[] = [
     options: [{ label: "Pair of anklets", price: "$15" }],
   },
   {
-    slug: "chime-anklet-pair", code: "J04", name: "Chime Anklet Pair", shortName: "Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "chime-anklet-pair", code: "J04", name: "Chime Anklet Pair", shortName: "Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-10-08T09:00:00-07:00",
     description: "A matching pair of hand-crocheted anklets with a textured band, dangling bells, and adjustable chain clasps. Choose one yarn color for both anklets.",
     shortDescription: "A simple crochet band with little dangling bells, made as a matching pair.", image: "/chime-anklet-pair.jpg", startingPrice: "$8",
     detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
@@ -93,7 +94,7 @@ export const products: Product[] = [
     options: [{ label: "Pair of anklets", price: "$8" }],
   },
   {
-    slug: "lace-chime-anklet-pair", code: "J05", name: "Lace Chime Anklet Pair", shortName: "Lace Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "lace-chime-anklet-pair", code: "J05", name: "Lace Chime Anklet Pair", shortName: "Lace Chime Anklet Pair", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-10-09T09:00:00-07:00",
     description: "A matching pair of hand-crocheted anklets with delicate open loops, colorful dangling bells, and adjustable chain clasps. Choose one yarn color for both anklets.",
     shortDescription: "Delicate crochet loops and colorful bells in a matching anklet pair.", image: "/lace-chime-anklet-pair.jpg", startingPrice: "$8",
     detailLabel: "Includes", detailValue: "Pair of anklets", colorLabel: "Custom colors",
@@ -101,7 +102,7 @@ export const products: Product[] = [
     options: [{ label: "Pair of anklets", price: "$8" }],
   },
   {
-    slug: "pearl-chime-necklace-set", code: "J06", name: "Pearl Chime Necklace Set", shortName: "Pearl Chime Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry",
+    slug: "pearl-chime-necklace-set", code: "J06", name: "Pearl Chime Necklace Set", shortName: "Pearl Chime Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-10-09T18:00:00-07:00",
     description: "A hand-crocheted necklace with five pearl-centered circles, scalloped edging, and dangling silver bells, paired with matching earrings. The photographed set combines red and navy blue yarn with an ivory cord.",
     shortDescription: "Pearl-centered crochet circles and silver bells with matching earrings.", image: "/pearl-chime-necklace-set.jpg", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Custom colors",
@@ -113,7 +114,7 @@ export const products: Product[] = [
     options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$5" }],
   },
   {
-    slug: "mirror-chime-hair-clip", code: "A01", name: "Mirror Chime Hair Clip", shortName: "Mirror Chime Hair Clip", category: "Hair accessories", categorySlug: "hair-accessories",
+    slug: "mirror-chime-hair-clip", code: "A01", name: "Mirror Chime Hair Clip", shortName: "Mirror Chime Hair Clip", category: "Hair accessories", categorySlug: "hair-accessories", addedAt: "2026-10-09T20:00:00-07:00",
     description: "A bright hand-crocheted hair clip with a round mirror center, contrasting crochet ring, scalloped edging, and dangling bells. Choose one of the photographed combinations or request your own two-color design.",
     shortDescription: "A colorful crochet hair clip with a mirror center and playful dangling bells.", image: "/mirror-chime-hair-clip.jpg", startingPrice: "$4",
     detailLabel: "Includes", detailValue: "One hair clip", colorLabel: "Three colorways shown",
@@ -126,7 +127,7 @@ export const products: Product[] = [
     options: [{ label: "One hair clip", price: "$4" }],
   },
   {
-    slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories",
+    slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories", addedAt: "2026-09-08T09:00:00-07:00",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",
     detailLabel: "Style", detailValue: "Full floral look", colorLabel: "Two colors",
@@ -136,7 +137,7 @@ export const products: Product[] = [
     ], options: [{ label: "One scrunchie", price: "$15" }, { label: "Set of 2", price: "$28" }],
   },
   {
-    slug: "crochet-mandala-table-mat", code: "M01", name: "Crochet Mandala Table Mat", shortName: "Mandala Table Mat", category: "Home décor", categorySlug: "home-decor",
+    slug: "crochet-mandala-table-mat", code: "M01", name: "Crochet Mandala Table Mat", shortName: "Mandala Table Mat", category: "Home décor", categorySlug: "home-decor", addedAt: "2026-10-01T09:00:00-07:00",
     description: "A round crochet table mat with layered scallops in bright blue and soft cream. Use it beneath a plant, serving bowl, or centerpiece to add a handmade accent to a side table or dining space.",
     shortDescription: "A layered scallop mat for plants, serving pieces, and table centerpieces.", image: "/mandala-table-mat.jpg", startingPrice: "$15",
     detailLabel: "Use", detailValue: "Tabletop accent", colorLabel: "Two colors shown",
@@ -153,7 +154,7 @@ export const products: Product[] = [
     options: [{ label: "One table mat", price: "$15" }],
   },
   {
-    slug: "spiral-crochet-hanging", code: "H01", name: "Spiral Crochet Hanging", shortName: "Spiral Hanging", category: "Hanging décor", categorySlug: "hanging-decor",
+    slug: "spiral-crochet-hanging", code: "H01", name: "Spiral Crochet Hanging", shortName: "Spiral Hanging", category: "Hanging décor", categorySlug: "hanging-decor", addedAt: "2026-10-02T09:00:00-07:00",
     description: "A playful crochet spiral that twists gently from a hanging loop and ends in a soft tassel. A lightweight handmade accent for a window, wall, doorway, or cozy corner.",
     shortDescription: "A playful twisting decoration finished with a soft yarn tassel.", image: "/spiral-hanging-blue-green.jpg", startingPrice: "$15",
     detailLabel: "Style", detailValue: "Spiral + tassel", colorLabel: "Two designs shown",
@@ -164,7 +165,7 @@ export const products: Product[] = [
     options: [{ label: "One hanging", price: "$15" }],
   },
   {
-    slug: "crochet-rose-hoop-wall-hanging", code: "W01", name: "Crochet Rose Hoop Wall Hanging", shortName: "Rose Hoop Wall Hanging", category: "Hanging décor", categorySlug: "hanging-decor",
+    slug: "crochet-rose-hoop-wall-hanging", code: "W01", name: "Crochet Rose Hoop Wall Hanging", shortName: "Rose Hoop Wall Hanging", category: "Hanging décor", categorySlug: "hanging-decor", addedAt: "2026-10-03T09:00:00-07:00",
     description: "A graceful crochet hoop arranged with dimensional pink roses, green leaves, and cascading leafy strands. A statement wall piece for a bedroom, nursery, entryway, or thoughtful handmade gift.",
     shortDescription: "Dimensional crochet roses and cascading leaves arranged on a yarn-wrapped hoop.", image: "/rose-hoop-wall-hanging.jpg", startingPrice: "$40",
     detailLabel: "Style", detailValue: "Floral hoop", colorLabel: "Four colorways shown",

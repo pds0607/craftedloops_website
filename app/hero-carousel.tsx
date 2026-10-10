@@ -4,13 +4,9 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { products } from "./products";
 
-const featuredProducts = [
-  "bloom-coaster",
-  "navratri-mirror-jewelry-set",
-  "crochet-rose-hoop-wall-hanging",
-]
-  .map((slug) => products.find((product) => product.slug === slug))
-  .filter((product): product is NonNullable<typeof product> => Boolean(product));
+const featuredProducts = [...products]
+  .sort((a, b) => Date.parse(b.addedAt) - Date.parse(a.addedAt))
+  .slice(0, 3);
 
 export function HeroCarousel() {
   const [current, setCurrent] = useState(0);
@@ -60,7 +56,7 @@ export function HeroCarousel() {
       >
         <img src={product.image} alt={product.name} />
         <span>
-          <small>Featured piece</small>
+          <small>Latest piece</small>
           <strong>{product.shortName}</strong>
           <em>From {product.startingPrice} · View product →</em>
         </span>

@@ -65,6 +65,16 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
             fixed: ["Cowrie shells, mirrors and decorative components"],
             note: "The earrings automatically match the necklace's main crochet color.",
           };
+    case "pearl-chime-necklace-set":
+      return {
+        items: [{ id: "set", label: option === "Earrings only" ? "Earrings" : "Full set", slots: [
+          { id: "circle", label: "Necklace circles + earring scallops color" },
+          { id: "scallop", label: "Necklace scallops + earring centers color" },
+          ...(option === "Earrings only" ? [] : [{ id: "cord", label: "Cord color" }]),
+        ] }],
+        fixed: ["White pearl centers, silver bells and metal hardware"],
+        note: "The two yarn colors are reversed in the matching earrings, as shown in the photo. The photo will not update to show your selection.",
+      };
     case "crochet-bell-anklet-pair":
       return {
         items: [{ id: "pair", label: "Anklet pair", slots: [

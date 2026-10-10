@@ -101,6 +101,15 @@ export const products: Product[] = [
     options: [{ label: "Pair of anklets", price: "$8" }],
   },
   {
+    slug: "pearl-chime-necklace-set", code: "J06", name: "Pearl Chime Necklace Set", shortName: "Pearl Chime Necklace Set", category: "Crochet jewelry", categorySlug: "jewelry",
+    description: "A hand-crocheted necklace with five pearl-centered circles, scalloped edging, and dangling silver bells, paired with matching earrings. The photographed set combines red and navy blue yarn with an ivory cord.",
+    shortDescription: "Pearl-centered crochet circles and silver bells with matching earrings.", image: "/pearl-chime-necklace-set.jpg", startingPrice: "$5",
+    detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Custom colors",
+    colors: [{ name: "Red + navy blue", colors: ["#e4142e", "#17345c"], image: "/pearl-chime-necklace-set.jpg" }],
+    gallery: [{ image: "/pearl-chime-necklace-set.jpg", alt: "Red and navy blue crochet necklace with white pearl centers, silver bells and matching earrings" }],
+    options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$5" }],
+  },
+  {
     slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",

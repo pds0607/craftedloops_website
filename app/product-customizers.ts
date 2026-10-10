@@ -105,6 +105,19 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
         fixed: ["Center mirror and metal clip hardware"],
         note: "Choose the main and accent yarn colors for your hair clip. Bell colors will be coordinated with your selection. The photo will not update to show your colors.",
       };
+    case "festive-square-bracelet-bajubandh":
+      return {
+        items: [{ id: "bracelet", label: "Bracelet / bajubandh", slots: [
+          { id: "center", label: "Color 1 (center)" },
+          { id: "band2", label: "Color 2" },
+          { id: "band3", label: "Color 3" },
+          { id: "band4", label: "Color 4" },
+          { id: "outer", label: "Color 5 (outer)" },
+          { id: "border", label: "Border + ties color" },
+        ] }],
+        fixed: ["Center mirror, cowrie-style beads and silver bells", "Square pattern and adjustable ties"],
+        note: "Your five selected colors will form the square from the center outward; the final color will be used for the border and ties. The photo will not update to show your selection.",
+      };
     case "crochet-gajara-scrunchie": {
       const count = option === "Set of 2" ? 2 : 1;
       return {

@@ -130,6 +130,19 @@ export const products: Product[] = [
     options: [{ label: "One hair clip", price: "$4" }],
   },
   {
+    slug: "festive-square-bracelet-bajubandh", code: "J07", name: "Festive Square Bracelet & Bajubandh", shortName: "Square Bracelet & Bajubandh", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-10-10T11:44:00-07:00",
+    description: "A colorful square crochet accessory with concentric yarn bands, a center mirror, cowrie-style beads, and little silver bells. Its soft ties let you wear the same handmade piece on your wrist as a bracelet or on your upper arm as a bajubandh.",
+    shortDescription: "A colorful mirrored crochet square that can be worn as a bracelet or bajubandh.", image: "/festive-square-bracelet-bajubandh.webp", startingPrice: "$10",
+    detailLabel: "Wear it as", detailValue: "Bracelet or bajubandh", colorLabel: "Six yarn colors shown",
+    colors: [{ name: "Festive multicolor", colors: ["#7f29bc", "#ec188f", "#8fcf19", "#174bbf", "#e4142e", "#f2ead8"], image: "/festive-square-bracelet-bajubandh.webp" }],
+    gallery: [
+      { image: "/festive-square-bracelet-bajubandh.webp", alt: "Handmade multicolor square crochet bracelet and bajubandh with mirror, cowrie-style beads and silver bells" },
+      { image: "/festive-square-bracelet-wrist.webp", alt: "Festive square crochet accessory worn on the wrist as a bracelet" },
+      { image: "/festive-square-bajubandh-model.webp", alt: "Festive square crochet accessory worn on the upper arm as a bajubandh" },
+    ],
+    options: [{ label: "One bracelet / bajubandh", price: "$10" }],
+  },
+  {
     slug: "crochet-gajara-scrunchie", code: "G01", name: "Crochet Gajara Scrunchie", shortName: "Gajara Scrunchie", category: "Hair accessories", categorySlug: "hair-accessories", addedAt: "2026-09-08T09:00:00-07:00",
     description: "A floral crochet gajara made around a comfortable hair scrunchie. Choose classic white buds or a bold red version, both finished with a fresh green center.",
     shortDescription: "A comfortable floral scrunchie inspired by the traditional gajara.", image: "/gajara-white.png", startingPrice: "$15",

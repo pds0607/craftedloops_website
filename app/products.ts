@@ -106,7 +106,10 @@ export const products: Product[] = [
     shortDescription: "Pearl-centered crochet circles and silver bells with matching earrings.", image: "/pearl-chime-necklace-set.jpg", startingPrice: "$5",
     detailLabel: "Includes", detailValue: "Necklace + earrings", colorLabel: "Custom colors",
     colors: [{ name: "Red + navy blue", colors: ["#e4142e", "#17345c"], image: "/pearl-chime-necklace-set.jpg" }],
-    gallery: [{ image: "/pearl-chime-necklace-set.jpg", alt: "Red and navy blue crochet necklace with white pearl centers, silver bells and matching earrings" }],
+    gallery: [
+      { image: "/pearl-chime-necklace-set.jpg", alt: "Red and navy blue crochet necklace with white pearl centers, silver bells and matching earrings" },
+      { image: "/pearl-chime-necklace-set-model.webp", alt: "Pearl Chime Necklace Set worn with a navy blue and fuchsia festive outfit" },
+    ],
     options: [{ label: "Full set", price: "$20" }, { label: "Earrings only", price: "$5" }],
   },
   {

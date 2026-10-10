@@ -1,0 +1,66 @@
+name: Deploy cPanel website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cpanel-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: vars.CPANEL_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build:cpanel
+      - name: Check exported site
+        run: |
+          test -s out/index.html
+          test -s out/shop/index.html
+          test -s out/send-inquiry.php
+          test -s out/products/pearl-chime-necklace-set/index.html
+      - name: Upload and install with backup
+        env:
+          SSH_KEY: ${{ secrets.CPANEL_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.CPANEL_KNOWN_HOSTS }}
+          SSH_HOST: ${{ vars.CPANEL_HOST }}
+          SSH_USER: ${{ vars.CPANEL_USER }}
+          SSH_PORT: ${{ vars.CPANEL_PORT }}
+        run: |
+          set -euo pipefail
+          test -n "$SSH_KEY" && test -n "$KNOWN_HOSTS"
+          [[ "$SSH_HOST" =~ ^[a-zA-Z0-9.-]+$ ]]
+          [[ "$SSH_USER" =~ ^[a-zA-Z0-9_-]+$ ]]
+          [[ "$SSH_PORT" =~ ^[0-9]+$ ]]
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/cpanel
+          chmod 600 ~/.ssh/cpanel
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          trap 'rm -f ~/.ssh/cpanel' EXIT
+          tar -czf "$RUNNER_TEMP/site.tar.gz" -C out .
+          remote_file="craftedloops-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.tar.gz"
+          scp -i ~/.ssh/cpanel -P "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$RUNNER_TEMP/site.tar.gz" "$SSH_USER@$SSH_HOST:$remote_file"
+          ssh -i ~/.ssh/cpanel -p "$SSH_PORT" -o BatchMode=yes -o StrictHostKeyChecking=yes "$SSH_USER@$SSH_HOST" "bash -s -- '$remote_file'" <<'REMOTE'
+          set -euo pipefail
+          archive="$1"
+          cd "$HOME"
+          test -d public_html && test ! -L public_html
+          mkdir -p craftedloops-backups
+          backup="craftedloops-backups/${archive%.tar.gz}-previous.tar.gz"
+          tar -czf "$backup" -C public_html .
+          tar -xzf "$archive" -C public_html --no-same-owner
+          test -s public_html/index.html
+          rm -- "$archive"
+          echo "Deployment installed; backup: $backup"
+          REMOTE
+      - name: Verify public website
+        run: |
+          curl --fail --silent --show-error --retry 3 https://craftedloops.art/products/pearl-chime-necklace-set/ | grep -q 'Pearl Chime'

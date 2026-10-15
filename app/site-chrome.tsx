@@ -5,5 +5,5 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  return <footer><img src="/crafted-loops-logo.jpeg" alt="" width="72" height="72" /><div><strong>Crafted Loops by Purvi</strong><span>Crochet · Create · Inspire</span></div><p>Personalised crochet pieces, handmade with patience and care.</p></footer>;
+  return <footer><img src="/crafted-loops-logo.jpeg" alt="" width="72" height="72" /><div><strong>Crafted Loops by Purvi</strong><span>Crochet · Create · Inspire</span></div><div className="footer-meta"><p>Personalised crochet pieces, handmade with patience and care.</p><nav aria-label="Footer navigation"><Link href="/privacy-policy">Privacy Policy</Link></nav></div></footer>;
 }

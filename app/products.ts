@@ -130,6 +130,17 @@ export const products: Product[] = [
     options: [{ label: "One hair clip", price: "$4" }],
   },
   {
+    slug: "tulip-row-hair-clip", code: "A02", name: "Tulip Row Hair Clip", shortName: "Tulip Row Hair Clip", category: "Hair accessories", categorySlug: "hair-accessories", addedAt: "2026-10-16T12:42:00-07:00",
+    description: "A sweet hand-crocheted hair clip with four dimensional tulip buds arranged along a leafy green base. Choose your favorite yarn colors for the flowers and greenery. Order five or more hair clips to receive 10% off each clip.",
+    shortDescription: "Four soft crochet tulip buds arranged on a leafy green hair clip.", image: "/tulip-row-hair-clip.webp", startingPrice: "$4",
+    detailLabel: "Includes", detailValue: "One hair clip", colorLabel: "Custom colors",
+    colors: [{ name: "Peach tulips + green base", colors: ["#f5cdb4", "#78a929"], image: "/tulip-row-hair-clip.webp" }],
+    options: [
+      { label: "One hair clip", price: "$4" },
+      { label: "5+ hair clips · 10% off", price: "$3.60 each" },
+    ],
+  },
+  {
     slug: "festive-square-bracelet-bajubandh", code: "J07", name: "Festive Square Bracelet & Bajubandh", shortName: "Square Bracelet & Bajubandh", category: "Crochet jewelry", categorySlug: "jewelry", addedAt: "2026-10-10T11:44:00-07:00",
     description: "A colorful square crochet accessory with concentric yarn bands, a center mirror, cowrie-style beads, and little silver bells. Its soft ties let you wear the same handmade piece on your wrist as a bracelet or on your upper arm as a bajubandh.",
     shortDescription: "A colorful mirrored crochet square that can be worn as a bracelet or bajubandh.", image: "/festive-square-bracelet-bajubandh.webp", startingPrice: "$10",

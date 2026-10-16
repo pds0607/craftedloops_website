@@ -105,6 +105,15 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
         fixed: ["Center mirror and metal clip hardware"],
         note: "Choose the main and accent yarn colors for your hair clip. Bell colors will be coordinated with your selection. The photo will not update to show your colors.",
       };
+    case "tulip-row-hair-clip":
+      return {
+        items: [{ id: "clip", label: "Hair clip", slots: [
+          { id: "tulips", label: "Tulip buds color" },
+          { id: "base", label: "Leafy base color" },
+        ] }],
+        fixed: ["Four tulip buds and metal clip hardware"],
+        note: "Choose the tulip and leafy base yarn colors. For an order of five or more, use the message box to request assorted tulip colors. The photo will not update to show your selection.",
+      };
     case "festive-square-bracelet-bajubandh":
       return {
         items: [{ id: "bracelet", label: "Bracelet / bajubandh", slots: [

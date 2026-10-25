@@ -137,6 +137,12 @@ export function getProductCustomizer(slug: string, option: string): ProductCusto
         copyPrevious: count > 1,
       };
     }
+    case "crochet-led-tealight-holders":
+      return {
+        items: [{ id: "holder", label: "Tealight holder", slots: [{ id: "flower", label: "Crochet flower color" }] }],
+        fixed: ["White flameless LED tealight", "Flower pattern and construction"],
+        note: "Choose one yarn color for your crochet holder. For orders of six or more, use the message box to request assorted colors. The photo will not update to show your selection. For LED tealights only; do not use with a real candle or open flame.",
+      };
     case "crochet-mandala-table-mat":
       return {
         items: [{ id: "mat", label: "Table mat", slots: [
